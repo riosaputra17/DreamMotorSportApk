@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#282828">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/frame_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:layout_marginVertical="-70dp" />
+
+            <ImageView
+                android:id="@+id/img_banner"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/preview_detail_image" />
+
+        </FrameLayout>
+
+
+        <View
+            android:id="@+id/vertical_gradient"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="-50dp"
+            android:background="@drawable/gradient_vertical_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frame_banner" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="-50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vertical_gradient"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/anim_down" />
+
+        <TextView
+            android:id="@+id/tv_deskripsi_motor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/bebas_neue_regular"
+            android:lineHeight="45dp"
+            android:text="@string/deskripsi_nmotor"
+            android:textColor="@color/color_white"
+            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frame_banner"
+            tools:ignore="UnusedAttribute" />
+
+        <ImageView
+            android:id="@+id/motor_detail"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:src="@drawable/raw_motor_detail"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toStartOf="@id/tv_deskripsi_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_deskripsi_motor" />
+
+        <TextView
+            android:id="@+id/tv_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="100dp"
+            android:fontFamily="@font/bebas_neue_regular"
+            android:lineHeight="70dp"
+            android:text="Yamaha R1 M"
+            android:textColor="@color/color_white"
+            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="@id/tv_deskripsi_content"
+            app:layout_constraintTop_toBottomOf="@id/frame_banner"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/tv_deskripsi_content"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:maxLines="3"
+            android:paddingEnd="40dp"
+            android:text="Yamaha R1 M adalah motor sport fairing yang memadukan kehebatan teknologi dan performa yang mengesankan. Dibangun dengan inovasi terkini dari Yamaha di lintasan balap, R1 M menawarkan pengalaman berkendara yang tak terlupakan. Mesin bertenaga 998 cc dengan desain 4-silinder memberikan akselerasi yang menggairahkan dan respons yang tajam di setiap putaran gas"
+            android:textColor="@color/color_white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_model"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/view_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_btn"
+            android:drawableStart="@drawable/ic_more"
+            android:drawablePadding="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="8dp"
+            android:text="View More Information"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tv_deskripsi_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_deskripsi_content" />
+
+        <LinearLayout
+            android:id="@+id/layout_spesifikasi"
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_more">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@id/tv_deskripsi_content"
+                app:layout_constraintTop_toBottomOf="@id/frame_banner">
+
+                <TextView
+                    android:id="@+id/tv_spesifikasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/bebas_neue_regular"
+                    android:text="@string/spesifikasi"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_white"
+                    android:textSize="50sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/color_white" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_spesifikasi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_spesifikasi"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_detail_specification_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

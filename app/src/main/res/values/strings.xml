@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">UPBAndroidTV</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="movies">Movies</string>
+    <string name="tv_show">TV Show</string>
+    <string name="sport">Sport</string>
+    <string name="about">About</string>
+    <string name="languages">Languages</string>
+    <string name="genres">Genres</string>
+    <string name="motor">Motor</string>
+    <string name="deskripsi_nmotor">Deskripsi\nMotor</string>
+    <string name="spesifikasi">Spesifikasi</string>
+    <string name="tentang_kami">Tentang Kami</string>
+    <string name="isi_about">Dream Motor Sport Colection adalah aplikasi yang berisi kumpulan motor sport terbaik dari class 150 cc sampai 1000 cc aplikasi ini bertujuan untuk memenuhi tugas pemrograman mobile mahasiswa Universitas Pelita Bangsa Prodi Teknik Informatika</string>
+</resources>
